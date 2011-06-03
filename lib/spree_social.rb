@@ -9,7 +9,7 @@ module SpreeSocial
     ["Github", "github"], ["Google", "google"] , ["Gowalla", "gowalla"], ["instagr.am", "instagram"],
     ["Instapaper", "instapaper"], ["LinkedIn", "linked_in"], ["37Signals (Basecamp, Campfire, etc)", "thirty_seven_signals"],
     ["Twitter", "twitter"], ["Vimeo", "vimeo"], ["Yahoo!", "yahoo"], ["YouTube", "you_tube"], ["Vkontakte", "vkontakte"],
-    ['Ad Hoc', 'adhoc_id']
+    ['Ad Hoc', 'adhoc_market']
   ]
 
 
