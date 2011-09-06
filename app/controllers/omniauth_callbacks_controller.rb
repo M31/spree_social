@@ -5,6 +5,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
 
   SpreeSocial::OAUTH_PROVIDERS.each do |provider|
+    #### DEBUGGARE DA QUI...
     method_name = (provider[1]).to_sym
     send :define_method, method_name do
       social_setup(provider[0])
@@ -13,6 +14,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def failure
     set_flash_message :alert, :failure, :kind => failed_strategy.name.to_s.humanize, :reason => failure_message
+		logger.info '### FAILURE ###'
+		logger.info failed_strategy.name.to_s.humanize
+		logger.info failure_message
+		logger.info '### FAILURE ###'
     redirect_to after_omniauth_failure_path_for(:user)
   end
  
